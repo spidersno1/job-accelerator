@@ -41,9 +41,24 @@ export const metadata: Metadata = {
   description: 'AI驱动的程序员求职助手 - 技能分析、岗位匹配、学习路径生成',
   keywords: ['程序员', '求职', 'AI', '技能分析', '岗位匹配', '学习路径'],
   authors: [{ name: '程序员求职加速器团队' }],
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#3b82f6',
 }
+
+/**
+ * 视口配置
+ * 
+ * 定义响应式视口设置，确保在移动设备上正确显示
+ */
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
+/**
+ * 主题颜色配置
+ * 
+ * 定义浏览器主题色彩，用于状态栏和地址栏显示
+ */
+export const themeColor = '#3b82f6'
 
 /**
  * 根布局组件
