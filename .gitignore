@@ -195,11 +195,15 @@ ehthumbs.db
 Thumbs.db
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# VS Code project settings (keep .vscode for project configuration)
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/extensions.json
 
 # Backup files
 *.bak
