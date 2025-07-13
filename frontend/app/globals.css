@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 主题色变量 */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* 全局背景与字体色 */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Tailwind自定义工具类 */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* 输入框可用性优化 */
+input, textarea {
+  color: #222 !important;
+  background: #fff !important;
+  caret-color: red !important;
+  border: 1px solid #ccc !important;
+  outline: 1.5px solid #2684ff33;
+  outline-offset: 0.5px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 1rem;
+}
+
+/* placeholder 颜色优化 */
+input::placeholder, textarea::placeholder {
+  color: #aaa !important;
+  opacity: 1;
+}
+
+/* 自定义动画 */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
